@@ -11,7 +11,7 @@
     <?php
         require_once "includes/banco.php";
         require_once "includes/funcoes.php";
-        $order = $_GET['o'] ?? "n";
+        $ordem = $_GET['o'] ?? "n";
     ?>
      
     <div id="corpo">
@@ -30,9 +30,12 @@
             <?php
                 $q = "select j.cod, j.nome, g.genero, p.produtora, j.capa from jogos j join generos g on j.genero = g.cod join produtoras p on j.produtora = p.cod ";
 
+              
+
+
                switch ($ordem) {
                    case "p":
-                        $q .= "ORDER BY p.produrora";
+                        $q .= "ORDER BY p.produtora";
                         break;
                    case "n1":
                         $q .= "ORDER BY j.nota DESC";
