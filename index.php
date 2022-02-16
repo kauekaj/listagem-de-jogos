@@ -10,6 +10,7 @@
 <body>
     <?php
         require_once "includes/banco.php";
+        require_once "includes/funcoes.php";
     ?>
      
     <div id="corpo">
@@ -24,7 +25,8 @@
                         echo "<tr><td>Nenhum registro encontrado";
                     } else {
                         while($reg = $busca->fetch_object()) {
-                            echo "<tr><td>$reg->capa<td>$reg->nome";
+                            $t = thumb($reg->capa);
+                            echo "<tr><td><img class='mini' src='$t'/><td>$reg->nome";
                             echo "<td>Adm";
                         }
                     }
