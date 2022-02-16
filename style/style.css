@@ -22,7 +22,6 @@ table.listagem tr {
 }
 
 table.listagem td {
-    /* border: 1px solid #ddd; */
     padding: 10px;
 }
 
@@ -42,6 +41,16 @@ table.detalhes {
     width: 100%;
 } 
 
+table.detalhes td {
+    padding: 10px;
+    vertical-align: top;
+} 
+
 img.mini {
-    width: 50px;
+    height: 60px;
+    width: 45px;
+}
+
+img.full {
+    height: 400px;
 }

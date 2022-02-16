@@ -25,8 +25,10 @@
             } else {
                 if($busca->num_rows == 1) {
                     $reg = $busca->fetch_object();
-                    echo "<tr><td rowspan='3'>foto";
+                    $t = thumb($reg->capa);
+                    echo "<tr><td rowspan='3'><img class='full' src='$t'>";
                     echo "<td><h2>$reg->nome</h2>";
+                    echo "Nota: $reg->nota/10.0";
                     echo "<tr><td>$reg->descricao";
                     echo "<tr><td>Adm";
                 } else {
@@ -35,6 +37,7 @@
             }
             ?>
         </table>
+        <a href="index.php"><img src="./icons/iconback.png"></a>
     </div>
 </body>
 </html>
