@@ -34,10 +34,13 @@ table.listagem td:nth-child(1) {
     width: 50px;
 }
 
-
 table.listagem td:nth-child(3) {
     width: 90px;
 }    
+
+table.detalhes {
+    width: 100%;
+} 
 
 img.mini {
     width: 50px;
