@@ -27,4 +27,3 @@ function testarHash($senha, $hash) {
     $ok = password_verify(cripto($senha), $hash);
     return $ok;
 }
-
