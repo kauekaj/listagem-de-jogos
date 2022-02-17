@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Modelo</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     rel="stylesheet">
+    <title>Detalhes do Jogo</title>
 </head>
 <body>
     <?php
@@ -38,7 +40,8 @@
             }
             ?>
         </table>
-        <a href="index.php"><img src="./icons/iconback.png"></a>
+        <?php echo voltar() ?>
+        
     </div>
     <?php include_once "rodape.php" ?>
 </body>
