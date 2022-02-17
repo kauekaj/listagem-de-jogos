@@ -67,9 +67,16 @@ $chave = $_GET['c'] ?? "";
                         $t = thumb($reg->capa);
                         echo "<tr><td><img class='mini' src='$t'/>";
                         echo "<td><a href='detalhes.php?cod=$reg->cod'>$reg->nome</a>";
-                        echo " [$reg->genero] ";
-                        echo "<br/>$reg->produtora";
-                        echo "<td>Adm";
+                        echo "<br/>($reg->genero) $reg->produtora";
+                        if (is_admin()) {
+                            echo "<td>";
+                            echo "<a href='index.php'><span class='material-icons black01'>add_circle</span></a>";
+                            echo "<a href='index.php'><span class='material-icons black01'>edit</span></a>";
+                            echo "<a href='index.php'><span class='material-icons black01'>delete</span></a>";
+                        } elseif (is_editor()) {
+                            echo "<td>";
+                            echo "<a href='index.php'><span class='material-icons black01'>edit</span></a>";
+                        }
                     }
                 }
             }

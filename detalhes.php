@@ -34,8 +34,14 @@ require_once "includes/funcoes.php";
                     echo "<tr><td rowspan='3'><img class='full' src='$t'>";
                     echo "<td><h2>$reg->nome</h2>";
                     echo "Nota: $reg->nota/10.0";
+                    if (is_admin()) {
+                        echo "  <a href='index.php'><span class='material-icons black01'>add_circle</span></a>";
+                        echo "<a href='index.php'><span class='material-icons black01'>edit</span></a>";
+                        echo "<a href='index.php'><span class='material-icons black01'>delete</span></a>";
+                    } elseif (is_editor()) {
+                        echo " <a href='index.php'><span class='material-icons black01'>edit</span></a>";
+                    }
                     echo "<tr><td>$reg->descricao";
-                    echo "<tr><td>Adm";
                 } else {
                     echo "<tr><td>Nenhum registro encontrado";
                 }

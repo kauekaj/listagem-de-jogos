@@ -79,6 +79,9 @@ footer {
     color: black;
 } 
 
+.material-icons.edit {
+    text-align: right;
+} 
 .sucesso {
     padding: 7px 15px;
     margin-bottom: 15px;
