@@ -27,3 +27,9 @@ function testarHash($senha, $hash) {
     $ok = password_verify(cripto($senha), $hash);
     return $ok;
 }
+
+function logout() {
+    unset($_SESSION['user']);
+    unset($_SESSION['nome']);
+    unset($_SESSION['tipo']);
+}
