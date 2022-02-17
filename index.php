@@ -27,7 +27,6 @@ $chave = $_GET['c'] ?? "";
             <a href="index.php?o=p&c=<?php echo $chave; ?>">Produtora</a> |
             <a href="index.php?o=n1&c=<?php echo $chave ?>">Nota Alta</a> |
             <a href="index.php?o=n2&c=<?php echo $chave ?>">Nota Baixa</a> |
-            <a href="index.php">Mostrar Todos</a> |
 
             Buscar: <input type="text" name="c" size="10" maxlength="40">
             <input type="submit" value="Ok">
